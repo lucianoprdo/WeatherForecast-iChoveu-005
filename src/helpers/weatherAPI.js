@@ -16,6 +16,15 @@ export const searchCities = (term) => {
     });
 };
 
-export const getWeatherByCity = (/* cityURL */) => {
-//   seu código aqui
+export const getWeatherByCity = (cityURL) => {
+  fetch(`http://api.weatherapi.com/v1/current.json?lang=pt&key=${import.meta.env.VITE_TOKEN}&q=${cityURL}`)
+    .then((response) => response.json())
+    .then((data) => {
+      const { current } = data;
+      return {
+        temp: current.temp_c,
+        condition: current.condition.text,
+        icon: current.condition.icon,
+      };
+    });
 };
