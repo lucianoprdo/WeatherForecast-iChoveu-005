@@ -77,8 +77,10 @@ export function showForecast(forecastList) {
  * Recebe um objeto com as informações de uma cidade e retorna um elemento HTML
  */
 export function createCityElement(cityInfo) {
-  const { name, country, temp, condition, icon /* , url */ } = cityInfo;
+  const { name, country, temp, condition, icon, url } = cityInfo;
+  console.log(name);
 
+  const ulElement = document.querySelector('#cities');
   const cityElement = createElement('li', 'city');
 
   const headingElement = createElement('div', 'city-heading');
@@ -103,6 +105,7 @@ export function createCityElement(cityInfo) {
 
   cityElement.appendChild(headingElement);
   cityElement.appendChild(infoContainer);
+  ulElement.appendChild(cityElement);
 
   return cityElement;
 }
@@ -116,9 +119,15 @@ export async function handleSearch(event) {
 
   const searchInput = document.getElementById('search-input');
   const searchValue = searchInput.value;
-  const getResult = await searchCities(searchValue);
 
-  const weatherList = Promise.all(getResult.map((city) => getWeatherByCity(city.url)))
-    .then((results) => results);
-  return weatherList;
+  const getResult = await searchCities(searchValue);
+  // console.log(getResult);
+
+  const weatherList = await Promise.all(getResult
+    .map((city) => {
+      const { url } = city;
+      return getWeatherByCity(url);
+    }));
+  // console.log();
+  weatherList.forEach((weather) => createCityElement(weather));
 }
