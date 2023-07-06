@@ -6,7 +6,7 @@ export const searchCities = (term) => {
   return fetch(`http://api.weatherapi.com/v1/search.json?lang=pt&key=${TOKEN}&q=${term}`)
     .then((response) => response.json())
     .then((data) => {
-      if (data.length === 0) {
+      if (!term || data.length === 0) {
         window.alert('Nenhuma cidade encontrada');
         return [];
       }
@@ -43,6 +43,5 @@ export const getWeatherByCity = async (url) => {
     };
   } catch (error) {
     console.error('Error:', error);
-    // Tratar o erro de acordo com as necessidades do código
   }
 };
