@@ -1,10 +1,9 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# README
+
+Arquivos criados por mim no curso de desenvolvimento web Trybe:
+
+- pageFunctions.js
+- weatherAPI.js
+*Os demais arquivos foram desenvolvidos pela escola Trybe*
+
+Neste projeto foi possível desenvolver um site de previsão do tempo consumindo dados diretamente de uma Application Programming Interface (API). Além disso, nesse site, há utilização de HyperText Markup Language, Cascading Style Sheets e JavaScript.
