@@ -1,9 +1,3 @@
-# README
+**Solicite acesso ao ReadMe deste projeto pelo link abaixo. Não esqueça de se identificar!**
 
-Arquivos criados por mim no curso de desenvolvimento web Trybe:
-
-- pageFunctions.js
-- weatherAPI.js
-*Os demais arquivos foram desenvolvidos pela escola Trybe*
-
-Neste projeto foi possível desenvolver um site de previsão do tempo consumindo dados diretamente de uma Application Programming Interface (API). Além disso, nesse site, há utilização de HyperText Markup Language, Cascading Style Sheets e JavaScript.
+https://drive.google.com/file/d/1spIT5gC-ks3d03eaKix_BiT1NS9N19nq/view?usp=sharing
